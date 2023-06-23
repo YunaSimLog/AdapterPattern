@@ -10,9 +10,17 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Adaptee adaptee = new Adaptee();
-            ITarget target = new Adapter(adaptee);
-            Console.WriteLine(target.GetRequest());
+            //Adaptee adaptee = new Adaptee();
+            //ITarget target = new Adapter(adaptee);
+            //Console.WriteLine(target.GetRequest());
+
+            NewDuck newDuck = new NewDuck();
+            newDuck.NewMove();
+
+            OringinDuck oringinDuck = new OringinDuck();
+            AdapterDock adapterDock = new AdapterDock(oringinDuck);
+
+            adapterDock.NewMove();
         }
     }
 }
