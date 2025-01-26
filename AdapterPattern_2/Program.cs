@@ -17,6 +17,13 @@ namespace AdapterPattern_2
             Adapter adapter1 = new Adapter(service);
             adapter1.Method(2025);
             // -----------------------------------------------------------------------
+
+            // -----------------------------------------------------------------------
+            // * 상속(Inheritance) 작용 Sample
+            // * 클래스 어댑터 (Class Adaptor)
+            Adapter2 adapter2 = new Adapter2();
+            adapter2.SpecificMethod(1119);
+            // -----------------------------------------------------------------------
         }
     }
 
@@ -30,5 +37,13 @@ namespace AdapterPattern_2
         {
             Console.WriteLine($"기존 서비스 기능 호출 {specialData}");
         }
+    }
+
+    /// <summary>
+    /// Client Interface : 클라이언트가 접근해서 사용할 고수준의 어댑터 모듈
+    /// </summary>
+    interface ITarget
+    {
+        void Method(int data);
     }
 }

@@ -6,18 +6,9 @@ using System.Threading.Tasks;
 
 namespace AdapterPattern_2
 {
-
-
     /// <summary>
-    /// Client Interface : 클라이언트가 접근해서 사용할 고수준의 어댑터 모듈
-    /// </summary>
-    interface ITarget
-    {
-        void Method(int data);
-    }
-
-    /// <summary>
-    /// Adapter : Adaptee 서비스를 클라이언트에서 사용할 수 있도록 호한 처리 해주는 어댑터
+    /// <para>Adapter : Adaptee 서비스를 클라이언트에서 사용하게 할 수 있도록 호환 처리 해주는 어댑터</para>
+    /// <para>객체 어댑터 / 합성하여 사용하는 방식</para>
     /// </summary>
     class Adapter : ITarget
     {
